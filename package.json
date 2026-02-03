@@ -15,7 +15,9 @@
   "type": "commonjs",
   "scripts": {
     "test": "jest",
-    "main": "App.js"
+    "main": "App.js",
+    "start":"parcel index.html",
+    "build":"parcel build index.html"
   },
   "devDependencies": {
     "parcel": "^2.16.3"
