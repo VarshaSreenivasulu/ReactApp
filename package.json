@@ -16,7 +16,7 @@
   "scripts": {
     "test": "jest",
     "main": "App.js",
-    "start":"parcel index.html",
+    "dev":"parcel index.html",
     "build":"parcel build index.html"
   },
   "devDependencies": {
