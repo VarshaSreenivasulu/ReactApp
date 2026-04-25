@@ -1,8 +1,24 @@
-.header-container{
+.header-container, .shimmer-header{
     display: flex;
     border: 1px solid black;
     justify-content: space-between;
     padding: 10px;
+}
+
+.shimmer-ui{
+    display:flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+.shimmer-header{
+    height:15vh;
+}
+
+.shimmer-body{
+    height:40vh;
+    align-content: center;
+    font-size: 60px;
 }
 
 .header-container ul{
@@ -15,9 +31,17 @@
     list-style-type: none;
     font-size: 35px;
     border: 1px solid red;
+    cursor: pointer;
 }
 
-.card-container{
+.header-container ul li a{
+    color: #000;
+    text-decoration: none;
+}
+
+a .card-container,.shimmer-body{
+    color: #000;
+    text-decoration: none;
     margin-top: 50px;
     width: 300px;
     padding: 20px; 
@@ -27,7 +51,12 @@
     cursor: pointer; 
     &:hover{
         outline : 2px solid salmon;
+        width: 325px;
     }
+}
+
+.card-link{
+    text-decoration: none;
 }
 
 .Card-overall-container{
@@ -41,4 +70,19 @@
     display: block;
     font-size: 30px;
     cursor: pointer;
+}
+
+.input-btn,.veg-nonveg-btn{
+    font-size: 30px;
+    text-align: center;
+}
+
+.veg-nonveg-btn{
+    margin:20px;
+}
+
+.input-btn input, 
+.input-btn button,
+.veg-nonveg-btn {
+    font-size: 30px;
 }
