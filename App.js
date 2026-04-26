@@ -6,6 +6,7 @@ import About from "./src/Components/About";
 import Contact from "./src/Components/Contact";
 import Body from "./src/Components/Body";
 import Menu from "./src/Components/Menu";
+import Error from "./src/Components/Error"
 
 // React CORE: 
 // const heading = React.createElement("div", { className: "parent"} ,
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
      {
           path: "/",
           element : <AppLayout />,
+          errorElement : <Error />,
           children: [
                {
                     path: "/",
@@ -40,7 +42,7 @@ const router = createBrowserRouter([
                },
                {
                     path: "/about",
-                    element : <About />
+                    element : <About name = {"Varsha"}/>
                },
                {
                     path: "/contact",

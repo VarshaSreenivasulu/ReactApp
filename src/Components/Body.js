@@ -16,6 +16,7 @@ const Body = () => {
                 setfiteredrestaurants(json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         };
         api_data();
+        setInterval(()=>{console.log("effect interval")},1000);
     },[]);
   return ( (topRated.length === 0)? <Shimmer /> :
     <>
