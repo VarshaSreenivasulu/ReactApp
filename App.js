@@ -2,11 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/Components/Header";
 import { createBrowserRouter, RouterProvider , Outlet } from "react-router-dom";
-import About from "./src/Components/About";
+// import About from "./src/Components/About";
 import Contact from "./src/Components/Contact";
 import Body from "./src/Components/Body";
 import Menu from "./src/Components/Menu";
-import Error from "./src/Components/Error"
+import Error from "./src/Components/Error";
+import { lazy , Suspense } from "react";
+// import Groceries from "./src/Components/Groceries";
+const About = lazy(()=>import("./src/Components/About"));
+
+const Groceries = lazy(()=>{
+     return import("./src/Components/Groceries");
+})
 
 // React CORE: 
 // const heading = React.createElement("div", { className: "parent"} ,
@@ -42,7 +49,7 @@ const router = createBrowserRouter([
                },
                {
                     path: "/about",
-                    element : <About name = {"Varsha"}/>
+                    element : <Suspense><About name = {"Varsha"}/></Suspense>
                },
                {
                     path: "/contact",
@@ -51,7 +58,11 @@ const router = createBrowserRouter([
                {
                     path: "/restaurant/:resId",
                     element : <Menu />
-               }
+               },
+               {
+                    path: "/groceries",
+                    element : <Suspense fallback = {<h1>Loading...</h1>}><Groceries /></Suspense>
+               }              
           ]
      }
 ])

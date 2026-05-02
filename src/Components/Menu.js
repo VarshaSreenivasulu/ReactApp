@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import React from "react";
-// import { menu_Url } from "../../Data/constants";
 
 const Menu = () => {
   const [menudata, setmenudata] = useState([]);
